@@ -2,8 +2,10 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/platform/manifest"
            review="https://android-review.googlesource.com/" />
+  <remote name="accupara"
+          fetch="https://github.com/accupara"/>
   <default revision="master"
            remote="aosp"
            sync-j="4" />
@@ -116,7 +118,8 @@
   <project path="external/android-clat" name="platform/external/android-clat" groups="pdk" />
   <project path="external/android-key-attestation" name="platform/external/android-key-attestation" groups="pdk" />
   <project path="external/androidplot" name="platform/external/androidplot" groups="pdk" />
-  <project path="external/angle" name="platform/external/angle" groups="pdk" />
+  <!-- <project path="external/angle" name="platform/external/angle" groups="pdk" /> -->
+  <project path="external/angle" name="aosp-angle" groups="pdk" remote="accupara"/>
   <project path="external/ant-glob" name="platform/external/ant-glob" groups="pdk" />
   <project path="external/antlr" name="platform/external/antlr" groups="pdk" />
   <project path="external/apache-commons-bcel" name="platform/external/apache-commons-bcel" groups="pdk" />
